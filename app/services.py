@@ -1,5 +1,6 @@
-from .models import User
 from . import db
+from .models import User
+
 
 def create_user(username, balance):
     new_user = User(username=username, balance=balance)
@@ -7,8 +8,10 @@ def create_user(username, balance):
     db.session.commit()
     return new_user
 
+
 def get_user_by_id(user_id):
     return User.query.get(user_id)
+
 
 def update_user_balance(user_id, balance_change):
     user = get_user_by_id(user_id)
@@ -17,6 +20,7 @@ def update_user_balance(user_id, balance_change):
         db.session.commit()
         return user
     return None
+
 
 def delete_user(user_id):
     user = get_user_by_id(user_id)
