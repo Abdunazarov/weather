@@ -1,0 +1,1 @@
+API_URL = "http://api.openweathermap.org/data/2.5/weather?q={}&appid=890d8e4df29f692f53d2c585b7de0937&units=metric"

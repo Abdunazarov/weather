@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "user-weather"
+version = "0.1.0"
+description = ""
+authors = ["Abdunazarov <abdunazarovdior@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+flask = "^3.0.2"
+sqlalchemy = "^2.0.27"
+requests = "^2.31.0"
+flask-sqlalchemy = "^3.1.1"
+flask-migrate = "^4.0.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
