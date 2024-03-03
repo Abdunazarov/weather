@@ -1,4 +1,5 @@
 from http import HTTPStatus
+from time import sleep
 
 from flask import Blueprint, jsonify, request
 
@@ -82,3 +83,17 @@ def update_balance():
         print(e)
 
     return jsonify({"error": "Failed to update balance"}), HTTPStatus.BAD_REQUEST
+
+
+@bp.route("/endpoint-1", methods=["GET"])
+def endpoint_1():
+    print("Starting execution...")
+    sleep(5)
+    return {"success": "Endpoint 1 executed!"}
+
+
+@bp.route("/endpoint-2", methods=["GET"])
+def endpoint_2():
+    print("Starting execution...")
+    sleep(5)
+    return {"success": "Endpoint 2 executed!"}
